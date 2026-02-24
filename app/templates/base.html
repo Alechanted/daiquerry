@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daiquerry</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo">D</div>
+      <div>
+        <div class="title">Daiquerry</div>
+        <div class="subtitle">Szkolenie Barmańskie I Stopnia</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="/" class="link link-nav">
+        <span class="link-icon" aria-hidden="true"></span>
+        Lista koktajli
+      </a>
+    </nav>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">© 2026 Daiquerry</footer>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</body>
+</html>

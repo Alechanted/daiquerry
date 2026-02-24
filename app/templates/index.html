@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section id="screen-list" class="screen">
+  <h2>Wybierz koktajl do nauki</h2>
+  <p class="muted" id="cocktail-count"></p>
+  <div id="cocktail-list" class="grid"></div>
+</section>
+
+<section id="screen-practice" class="screen hidden">
+  <div class="row">
+    <button id="back-btn" class="btn btn-light">← Powrót</button>
+    <button id="reset-btn" class="btn btn-light">Reset</button>
+  </div>
+
+  <div class="hero">
+    <h2 id="cocktail-name"></h2>
+    <p class="muted">Zbuduj poprawną recepturę</p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3>Metoda</h3>
+      <div id="method-zone" class="dropzone" data-zone="method"></div>
+
+      <h3>Szkło</h3>
+      <div id="glass-zone" class="dropzone" data-zone="glass"></div>
+
+      <h3>Składniki (przeciągnij, aby dodać; przeciągnij w liście, aby zmienić kolejność)</h3>
+      <div id="ingredients-zone" class="dropzone" data-zone="ingredients"></div>
+
+      <div class="row right">
+        <button id="validate-btn" class="btn btn-primary" disabled>Sprawdź recepturę</button>
+      </div>
+
+      <div id="result" class="result hidden"></div>
+    </div>
+
+    <aside>
+      <h3>Bank elementów</h3>
+
+      <div class="bank">
+        <label class="muted">Szukaj</label>
+        <input id="search" class="input" placeholder="Szukaj...">
+      </div>
+
+      <div class="bank">
+        <div class="muted small">Metody</div>
+        <div id="methods-bank" class="tiles"></div>
+      </div>
+
+      <div class="bank">
+        <div class="muted small">Szkło</div>
+        <div id="glass-bank" class="tiles"></div>
+      </div>
+
+      <div class="bank">
+        <div class="muted small">Alkohole</div>
+        <div id="alcohols-bank" class="tiles"></div>
+      </div>
+
+      <div class="bank">
+        <div class="muted small">Pozostałe</div>
+        <div id="others-bank" class="tiles"></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,266 @@
+[
+  {
+    "id": 1,
+    "name": "Cuba Libre",
+    "method": "Budowanie",
+    "brandRequired": false,
+    "glassware": "highball",
+    "ingredients": [
+      { "type": "Rum", "specificBrand": "Bacardi", "amount": 40, "unit": "ml", "label": "Bacardi Carta Blanca" },
+      { "type": "Other", "label": "Sok z 2-3 cząstek limonki", "unit": "szt" },
+      { "type": "Soft", "specificBrand": "Cola", "unit": "dopełnienie", "label": "Cola" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Tequila Sunrise",
+    "method": "Budowanie",
+    "brandRequired": false,
+    "glassware": "highball",
+    "ingredients": [
+      { "type": "Tequila", "specificBrand": "Patrón", "amount": 40, "unit": "ml", "label": "Patrón Silver" },
+      { "type": "Soft", "specificBrand": "Sok pomarańczowy", "unit": "dopełnienie", "label": "Sok pomarańczowy" },
+      { "type": "Soft", "specificBrand": "Grenadyna", "unit": "ml", "label": "Grenadyna" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Aperol Spritz",
+    "method": "Budowanie",
+    "brandRequired": true,
+    "glassware": "wine",
+    "ingredients": [
+      { "type": "Bitter/Wermut/Aperitif", "specificBrand": "Martini", "amount": 3, "unit": "części", "label": "Martini Prosecco" },
+      { "type": "Bitter/Wermut/Aperitif", "specificBrand": "Aperol", "amount": 2, "unit": "części", "label": "Aperol" },
+      { "type": "Soft", "specificBrand": "Woda gazowana", "amount": 1, "unit": "części", "label": "Woda gazowana" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Fierro Tonic",
+    "method": "Budowanie",
+    "brandRequired": true,
+    "glassware": "wine",
+    "ingredients": [
+      { "type": "Bitter/Wermut/Aperitif", "specificBrand": "Martini", "amount": 80, "unit": "ml", "label": "Martini Fierro" },
+      { "type": "Soft", "specificBrand": "Tonic", "amount": 80, "unit": "ml", "label": "Thomas Henry Tonic Water" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "B-52",
+    "method": "Budowanie",
+    "brandRequired": true,
+    "glassware": "shot",
+    "ingredients": [
+      { "type": "Likier", "specificBrand": "Bols", "amount": 1, "unit": "części", "label": "Bols Coffee" },
+      { "type": "Likier", "specificBrand": "Baileys", "amount": 1, "unit": "części", "label": "Baileys" },
+      { "type": "Likier", "specificBrand": "Cointreau", "amount": 1, "unit": "części", "label": "Cointreau" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Sex on the Beach",
+    "method": "Budowanie",
+    "brandRequired": false,
+    "glassware": "highball",
+    "ingredients": [
+      { "type": "Wódka", "specificBrand": "Żubrówka", "amount": 40, "unit": "ml", "label": "Żubrówka Czarna" },
+      { "type": "Likier", "specificBrand": "Bols", "amount": 20, "unit": "ml", "label": "Bols Peach" },
+      { "type": "Likier", "specificBrand": "Bols", "amount": 20, "unit": "ml", "label": "Bols Coconut" },
+      { "type": "Soft", "specificBrand": "Sok pomarańczowy", "amount": 60, "unit": "ml", "label": "Sok pomarańczowy" },
+      { "type": "Soft", "specificBrand": "Sok żurawinowy", "unit": "dopełnienie", "label": "Sok żurawinowy" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Whisky Sour",
+    "method": "Wstrząsanie",
+    "brandRequired": false,
+    "glassware": "rocks",
+    "ingredients": [
+      { "type": "Whisky Szkocka Blended", "specificBrand": "Dewar’s", "amount": 40, "unit": "ml", "label": "Dewar’s 12" },
+      { "type": "Soft", "specificBrand": "Sok z cytryny", "amount": 30, "unit": "ml", "label": "Sok z cytryny" },
+      { "type": "Soft", "specificBrand": "Syrop cukrowy", "amount": 20, "unit": "ml", "label": "Syrop cukrowy" },
+      { "type": "Bitter/Wermut/Aperitif", "specificBrand": "Angostura", "amount": 2, "unit": "dash", "label": "Angostura Bitters" },
+      { "type": "Other", "specificBrand": "Białko jajka", "amount": 20, "unit": "ml", "label": "Białko jajka" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Tom Collins",
+    "method": "Wstrząsanie",
+    "brandRequired": false,
+    "glassware": "highball",
+    "ingredients": [
+      { "type": "Gin", "specificBrand": "Bombay Sapphire", "amount": 40, "unit": "ml", "label": "Bombay Sapphire" },
+      { "type": "Soft", "specificBrand": "Sok z cytryny", "amount": 30, "unit": "ml", "label": "Sok z cytryny" },
+      { "type": "Soft", "specificBrand": "Syrop cukrowy", "amount": 20, "unit": "ml", "label": "Syrop cukrowy" },
+      { "type": "Soft", "specificBrand": "Woda gazowana", "unit": "dopełnienie", "label": "Woda gazowana" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Margarita",
+    "method": "Wstrząsanie",
+    "brandRequired": false,
+    "glassware": "margarita",
+    "ingredients": [
+      { "type": "Tequila", "specificBrand": "Patrón", "amount": 40, "unit": "ml", "label": "Patrón Silver" },
+      { "type": "Likier", "specificBrand": "Cointreau", "amount": 20, "unit": "ml", "label": "Cointreau" },
+      { "type": "Soft", "specificBrand": "Sok z limonki", "amount": 20, "unit": "ml", "label": "Sok z limonki" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Daiquiri",
+    "method": "Wstrząsanie",
+    "brandRequired": false,
+    "glassware": "cocktail",
+    "ingredients": [
+      { "type": "Rum", "specificBrand": "Bacardi", "amount": 40, "unit": "ml", "label": "Bacardi Carta Blanca" },
+      { "type": "Soft", "specificBrand": "Sok z limonki", "amount": 20, "unit": "ml", "label": "Sok z limonki" },
+      { "type": "Soft", "specificBrand": "Syrop cukrowy", "amount": 10, "unit": "ml", "label": "Syrop cukrowy" }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Orgasm",
+    "method": "Wstrząsanie",
+    "brandRequired": false,
+    "glassware": "cocktail",
+    "ingredients": [
+      { "type": "Likier", "specificBrand": "Baileys", "amount": 30, "unit": "ml", "label": "Baileys" },
+      { "type": "Likier", "specificBrand": "Bols", "amount": 30, "unit": "ml", "label": "Bols Coffee" },
+      { "type": "Soft", "specificBrand": "Mleczko zagęszczone", "amount": 30, "unit": "ml", "label": "Mleczko zagęszczone" }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Cosmopolitan",
+    "method": "Wstrząsanie",
+    "brandRequired": false,
+    "glassware": "cocktail",
+    "ingredients": [
+      { "type": "Wódka", "amount": 40, "unit": "ml", "label": "Wódka cytrynowa" },
+      { "type": "Likier", "specificBrand": "Cointreau", "amount": 20, "unit": "ml", "label": "Cointreau" },
+      { "type": "Soft", "specificBrand": "Sok z limonki", "amount": 15, "unit": "ml", "label": "Sok z limonki" },
+      { "type": "Soft", "specificBrand": "Sok żurawinowy", "amount": 30, "unit": "ml", "label": "Sok żurawinowy" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "White Russian",
+    "method": "Mieszanie",
+    "brandRequired": false,
+    "glassware": "rocks",
+    "ingredients": [
+      { "type": "Wódka", "specificBrand": "Żubrówka", "amount": 40, "unit": "ml", "label": "Żubrówka Czarna" },
+      { "type": "Likier", "specificBrand": "Bols", "amount": 40, "unit": "ml", "label": "Bols Coffee" },
+      { "type": "Soft", "specificBrand": "Śmietanka", "unit": "dopełnienie", "label": "Śmietanka" }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Long Island Iced Tea",
+    "method": "Wstrząsanie",
+    "brandRequired": false,
+    "glassware": "highball",
+    "ingredients": [
+      { "type": "Wódka", "specificBrand": "Żubrówka", "amount": 20, "unit": "ml", "label": "Żubrówka Czarna" },
+      { "type": "Tequila", "specificBrand": "Patrón", "amount": 20, "unit": "ml", "label": "Patrón Silver" },
+      { "type": "Rum", "specificBrand": "Bacardi", "amount": 20, "unit": "ml", "label": "Bacardi Carta Blanca" },
+      { "type": "Gin", "specificBrand": "Bombay Sapphire", "amount": 20, "unit": "ml", "label": "Bombay Sapphire" },
+      { "type": "Likier", "specificBrand": "Cointreau", "amount": 20, "unit": "ml", "label": "Cointreau" },
+      { "type": "Soft", "specificBrand": "Sok z cytryny", "amount": 20, "unit": "ml", "label": "Sok z cytryny" },
+      { "type": "Soft", "specificBrand": "Syrop cukrowy", "amount": 20, "unit": "ml", "label": "Syrop cukrowy" },
+      { "type": "Soft", "specificBrand": "Cola", "unit": "dopełnienie", "label": "Cola" }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Negroni",
+    "method": "Mieszanie",
+    "brandRequired": false,
+    "glassware": "rocks",
+    "ingredients": [
+      { "type": "Gin", "specificBrand": "Bombay Sapphire", "amount": 30, "unit": "ml", "label": "Bombay Sapphire" },
+      { "type": "Bitter/Wermut/Aperitif", "specificBrand": "Campari", "amount": 30, "unit": "ml", "label": "Campari" },
+      { "type": "Bitter/Wermut/Aperitif", "specificBrand": "Martini", "amount": 30, "unit": "ml", "label": "Martini Rosso/Rubino" }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Martini",
+    "method": "Mieszanie",
+    "brandRequired": false,
+    "glassware": "cocktail",
+    "ingredients": [
+      { "type": "Gin", "specificBrand": "Bombay Sapphire", "amount": 60, "unit": "ml", "label": "Bombay Sapphire" },
+      { "type": "Bitter/Wermut/Aperitif", "specificBrand": "Martini", "amount": 20, "unit": "ml", "label": "Martini Extra Dry" }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Old Fashioned",
+    "method": "Mieszanie",
+    "brandRequired": false,
+    "glassware": "rocks",
+    "ingredients": [
+      { "type": "Whiskey Amerykańska Bourbon", "amount": 50, "unit": "ml", "label": "Whiskey żytnia lub bourbon" },
+      { "type": "Soft", "specificBrand": "Syrop cukrowy", "amount": 5, "unit": "ml", "label": "Syrop cukrowy" },
+      { "type": "Bitter/Wermut/Aperitif", "specificBrand": "Angostura", "amount": 3, "unit": "dash", "label": "Angostura Bitters" }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Manhattan",
+    "method": "Mieszanie",
+    "brandRequired": false,
+    "glassware": "cocktail",
+    "ingredients": [
+      { "type": "Whiskey Amerykańska Bourbon", "specificBrand": "Angel’s Envy", "amount": 40, "unit": "ml", "label": "Bourbon Angel’s Envy" },
+      { "type": "Bitter/Wermut/Aperitif", "specificBrand": "Martini", "amount": 20, "unit": "ml", "label": "Martini Rubino" },
+      { "type": "Bitter/Wermut/Aperitif", "specificBrand": "Angostura", "amount": 2, "unit": "dash", "label": "Angostura Bitter" }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Mojito",
+    "method": "Muddlowanie",
+    "brandRequired": false,
+    "glassware": "highball",
+    "ingredients": [
+      { "type": "Rum", "specificBrand": "Bacardi", "amount": 40, "unit": "ml", "label": "Bacardi Carta Blanca" },
+      { "type": "Other", "label": "Limonka", "amount": 0.5, "unit": "szt" },
+      { "type": "Other", "label": "Mięta", "unit": "szt" },
+      { "type": "Other", "label": "Cukier trzcinowy", "amount": 2, "unit": "łyżeczka" },
+      { "type": "Soft", "specificBrand": "Woda gazowana", "unit": "dopełnienie", "label": "Woda gazowana" }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Caipirinha",
+    "method": "Muddlowanie",
+    "brandRequired": false,
+    "glassware": "rocks",
+    "ingredients": [
+      { "type": "Cachaça", "specificBrand": "Leblon", "amount": 40, "unit": "ml", "label": "Cachaça Leblon" },
+      { "type": "Other", "label": "Limonka", "amount": 0.5, "unit": "szt" },
+      { "type": "Other", "label": "Cukier trzcinowy", "amount": 2, "unit": "łyżeczka" }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Krwawa Mary",
+    "method": "Throwing/Rolowanie",
+    "brandRequired": false,
+    "glassware": "highball",
+    "ingredients": [
+      { "type": "Wódka", "specificBrand": "Żubrówka", "amount": 40, "unit": "ml", "label": "Żubrówka Czarna" },
+      { "type": "Soft", "specificBrand": "Sok pomidorowy", "amount": 100, "unit": "ml", "label": "Sok pomidorowy" },
+      { "type": "Soft", "specificBrand": "Sok z cytryny", "amount": 15, "unit": "ml", "label": "Sok z cytryny" },
+      { "type": "Other", "label": "Przyprawy (Worcestershire, Tabasco, sól, pieprz)", "unit": "dash" }
+    ]
+  }
+]
