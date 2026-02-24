@@ -93,31 +93,35 @@ body::after {
   height: 38px;
   border-radius: 12px;
 
+  fill: white;
+
   display: grid;
   place-items: center;
 
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  color: rgba(7, 10, 18, 0.95);
-
-  background: linear-gradient(135deg, rgba(0, 229, 255, 0.95), rgba(255, 43, 214, 0.85));
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.20) inset,
-    0 14px 45px rgba(0, 229, 255, 0.16),
-    0 14px 45px rgba(255, 43, 214, 0.12);
+  background: none;
   position: relative;
   overflow: hidden;
 }
 
-/* Placeholder ikonki w logo */
 .logo::before {
   content: "";
   position: absolute;
-  inset: 7px;
-  background-image: var(--brand-icon);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  inset: 0px;
+
+  /* kolor ikonki */
+  background-color: #fff;
+
+  /* SVG jako maska (zamiast background-image) */
+  -webkit-mask-image: var(--brand-icon);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-image: var(--brand-icon);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
   opacity: 0.95;
   pointer-events: none;
 }
