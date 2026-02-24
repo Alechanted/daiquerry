@@ -196,16 +196,12 @@ body::after {
   height: 16px;
   display: inline-block;
 
-  /* placeholder pod ikonę książki/menu */
-  background-image: none; /* np. url("/static/images/icon-book.svg") */
+  background-image: url("/static/images/book.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 
   border-radius: 5px;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(0, 229, 255, 0.80), rgba(0, 229, 255, 0.10) 65%),
-    radial-gradient(circle at 70% 70%, rgba(255, 43, 214, 0.65), rgba(255, 43, 214, 0.08) 70%);
   box-shadow: 0 0 18px rgba(0, 229, 255, 0.16);
 }
 
@@ -271,7 +267,6 @@ body::after {
   animation: fadeUp 420ms ease forwards;
 }
 
-/* Neonowy “rim light” */
 .hero::before {
   content: "";
   position: absolute;
@@ -284,15 +279,13 @@ body::after {
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
 }
-
-/* Ikona-koktajl w tle hero (placeholder) */
 .hero::after {
   content: "";
   position: absolute;
   right: -18px;
   bottom: -18px;
-  width: 240px;
-  height: 240px;
+  width: 200px;
+  height: 200px;
 
   background-image: var(--hero-icon);
   background-repeat: no-repeat;
@@ -359,6 +352,45 @@ body::after {
 
   backdrop-filter: blur(var(--blur));
   -webkit-backdrop-filter: blur(var(--blur));
+}
+
+/* Scroll tylko dla list (żeby bank „Szukaj” nie był ucinany) */
+.bank .tiles {
+  max-height: min(320px, 42vh);
+  overflow: auto;
+  padding-right: 6px; /* miejsce na scrollbar, żeby nie nachodził na kafelki */
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 229, 255, 0.38) rgba(255, 255, 255, 0.08);
+}
+
+/* WebKit (Chromium/Safari) */
+.bank .tiles::-webkit-scrollbar {
+  width: 10px;
+}
+
+.bank .tiles::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+
+.bank .tiles::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 229, 255, 0.45),
+    rgba(255, 43, 214, 0.25)
+  );
+  border: 2px solid rgba(16, 19, 33, 0.55);
+  border-radius: 999px;
+}
+
+.bank .tiles::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 229, 255, 0.65),
+    rgba(255, 43, 214, 0.35)
+  );
 }
 
 .row { display: flex; gap: 8px; align-items: center; }

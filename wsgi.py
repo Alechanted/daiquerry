@@ -14,7 +14,6 @@ def color_text(text, color_code):
 def get_local_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
-        # Łączymy się do publicznego serwera DNS (nie wysyłamy pakietów)
         s.connect(("8.8.8.8", 80))
         ip = s.getsockname()[0]
     except Exception:
