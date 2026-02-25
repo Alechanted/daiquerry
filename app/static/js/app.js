@@ -327,6 +327,12 @@ function renderBanks() {
 }
 
 async function init() {
+  MobileDragDrop.polyfill({
+    // Ustawienie wymusza opóźnienie rozpoczęcia przeciągania o np. 200ms. 
+    // Dzięki temu krótkie dotknięcie/pociągnięcie wciąż będzie przewijać ekran.
+    holdToDrag: 200 
+  });
+
   // load data
   const [cocktails, alcohols] = await Promise.all([
     apiGet("/api/cocktails"),
