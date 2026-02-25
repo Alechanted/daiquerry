@@ -78,19 +78,34 @@ function alcoholById(id) {
 function makeTile({ id, label, kind }) {
   const el = document.createElement("div");
   el.className = "tile";
-  el.draggable = true;
   el.textContent = label;
   el.dataset.id = id;
   el.dataset.kind = kind;
 
-  el.addEventListener("dragstart", (e) => {
-    e.dataTransfer.setData("text/plain", JSON.stringify({ id, label, kind }));
-  });
+  const coarse = isCoarsePointer();
 
-  // Mobile/touch: tap-to-add zamiast przeciągania (bo scroll w trakcie drag jest zablokowany)
-  if (isCoarsePointer()) {
-    el.addEventListener("click", () => mobileAddFromTile({ id, label, kind }));
+  // Desktop: klasyczne DnD
+  if (!coarse) {
+    el.draggable = true;
+    el.addEventListener("dragstart", (e) => {
+      e.dataTransfer.setData("text/plain", JSON.stringify({ id, label, kind }));
+    });
+    return el;
   }
+
+  // Mobile/touch: WYŁĄCZAMY draggable (bo często blokuje click/tap na mobile)
+  el.draggable = false;
+
+  // Tap-to-add (bardziej niezawodne niż "click" na elementach udających drag)
+  const onTap = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    mobileAddFromTile({ id, label, kind });
+  };
+
+  el.addEventListener("pointerup", onTap, { passive: false });
+  el.addEventListener("touchend", onTap, { passive: false }); // fallback dla starszych
+  el.addEventListener("click", onTap); // fallback
 
   return el;
 }
