@@ -20,6 +20,34 @@ let state = {
 
 function qs(id) { return document.getElementById(id); }
 
+function isCoarsePointer() {
+  return window.matchMedia && window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+}
+
+function mobileAddFromTile({ id, label, kind }) {
+  if (kind === "method") {
+    state.method = label;
+    renderPractice();
+    qs("method-zone")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  if (kind === "glass") {
+    state.glassware = id;
+    renderPractice();
+    qs("glass-zone")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  if (kind === "alcohol" || kind === "other") {
+    if (!state.ingredients.some(x => x.id === id)) {
+      state.ingredients.push({ id, amount: "" });
+      renderPractice();
+      qs("ingredients-zone")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
+}
+
 async function apiGet(path) {
   const r = await fetch(path, { headers: { "Accept": "application/json" }});
   return await r.json();
@@ -54,9 +82,16 @@ function makeTile({ id, label, kind }) {
   el.textContent = label;
   el.dataset.id = id;
   el.dataset.kind = kind;
+
   el.addEventListener("dragstart", (e) => {
     e.dataTransfer.setData("text/plain", JSON.stringify({ id, label, kind }));
   });
+
+  // Mobile/touch: tap-to-add zamiast przeciągania (bo scroll w trakcie drag jest zablokowany)
+  if (isCoarsePointer()) {
+    el.addEventListener("click", () => mobileAddFromTile({ id, label, kind }));
+  }
+
   return el;
 }
 

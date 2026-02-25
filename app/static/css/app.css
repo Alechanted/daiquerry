@@ -316,6 +316,21 @@ body::after {
   -webkit-backdrop-filter: blur(var(--blur));
 
   transition: border-color 140ms ease, background 140ms ease;
+
+  /* gdy scrollIntoView odpala na mobile, uwzględnij sticky header */
+  scroll-margin-top: 86px;
+}
+
+/* Mobile: trochę ciaśniej, żeby szybciej „mieściło się” w ekranie */
+@media (max-width: 980px) {
+  .dropzone {
+    min-height: 56px;
+    padding: 10px;
+  }
+
+  .tile {
+    padding: 10px 12px;
+  }
 }
 
 .tiles { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -489,12 +504,3 @@ body::after {
 
 .result.ok { border-color: rgba(34, 197, 94, 0.45); background: rgba(5, 46, 22, 0.40); }
 .result.bad { border-color: rgba(239, 68, 68, 0.45); background: rgba(69, 10, 10, 0.40); }
-
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .card, .hero { animation: none; opacity: 1; transform: none; }
-  .btn, .tile, .link-nav, .card { transition: none; }
-}
